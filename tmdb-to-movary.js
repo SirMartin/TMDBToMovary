@@ -3,10 +3,10 @@ const readline = require('readline');
 const axios = require("axios");
 
 // Remember to fill these values, following the README instructions.
-const tmdb_api_key = "FILL WITH YOUR VALUE";
-const movary_url = "FILL WITH YOUR VALUE";
-const movary_id_cookie = "FILL WITH YOUR VALUE";
-const movary_php_session_cookie = "FILL WITH YOUR VALUE";
+const tmdb_api_key = "FILL_WITH_YOUR_VALUE";
+const movary_url = "FILL_WITH_YOUR_VALUE";
+const movary_id_cookie = "FILL_WITH_YOUR_VALUE";
+const movary_php_session_cookie = "FILL_WITH_YOUR_VALUE";
 const movary_cookie_value = `id=${movary_id_cookie}; PHPSESSID=${movary_php_session_cookie};`;
 
 (async () => {
@@ -64,6 +64,8 @@ async function getMoviesFromTMDB(account_id, session_id) {
         movies = movies.concat(res);
         console.log(movies.length);
     }
+
+    fs.appendFileSync("movies.json", JSON.stringify(movies));
 
     return movies;
 }
