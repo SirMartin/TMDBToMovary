@@ -10,6 +10,8 @@ Until now, I was using [The Movie Database](https://www.themoviedb.org/) to stor
 
 So this is a small script to automatize the export of my ratings from [The Movie Database](https://www.themoviedb.org/) and import them into [Movary](https://github.com/leepeuker/movary).
 
+> Run this script and import the data on you own risk, I recommend try it first on an empty instance of Movary to avoid data loses, or at least make some backups if you have some previous data.
+
 ## Requirements
 
 - You need an api key from [The Movie Database](https://www.themoviedb.org/).
